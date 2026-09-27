@@ -1,9 +1,7 @@
-const   percentButton = document.querySelector('[data-action="percent"]');
+const selection = document.querySelector(".calculator-buttons");
 
-percentButton.addEventListener("click", () => {
-    console.log(percentButton);
+selection.addEventListener("click", (selectedButton) => {
+    if (selectedButton.target.tagName === "BUTTON") {
+        console.log(selectedButton.target);
+    }
 });
-
-const buttonSelection = document.querySelector(".calculator-buttons");
-
-buttonSelection.addEventListener("click", () => {})

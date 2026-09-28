@@ -1,7 +1,9 @@
-const selection = document.querySelector(".calculator-buttons");
+const buttons = document.querySelector(".calculator-buttons");
+const readout = document.querySelector(".calculator-display");
 
-selection.addEventListener("click", (selectedButton) => {
+buttons.addEventListener("click", (selectedButton) => {
     if (selectedButton.target.tagName === "BUTTON") {
-        console.log(selectedButton.target);
+        const buttonChar = selectedButton.target.textContent;
+        readout.textContent = buttonChar;
     }
 });

@@ -1,13 +1,14 @@
-const buttons = document.querySelector(".calculator-buttons");
+const buttonsContainer = document.querySelector(".calculator-buttons");
 const readout = document.querySelector(".calculator-display");
 
 let firNum = "";
-let operand = "";
+let operator = "";
 let secNum = "";
 
-buttons.addEventListener("click", (selectedButton) => {
+buttonsContainer.addEventListener("click", (selectedButton) => {
     if (selectedButton.target.tagName === "BUTTON") {
-        
         console.log(selectedButton.target);
+        const buttonChar = selectedButton.target.textContent;
+        readout.textContent = readout.textContent + buttonChar;
     }
 });
